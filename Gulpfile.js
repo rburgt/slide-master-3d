@@ -15,8 +15,16 @@ gulp.task('build:asset:javascript', function () {
 
 gulp.task('build:asset:scss', function () {
     return gulp.src('./src/asset/scss/*.scss')
-        .pipe($.rubySass())
+        .pipe($.rubySass({
+            loadPath: [
+                'src/asset/scss',
+
+                // allows loading of bower_components
+                'node_modules'
+            ]
+        }))
         .pipe($.autoprefixer())
+        .on('error', function (err) { console.log(err.message); })
         .pipe(gulp.dest('./build/css'));
 });
 
