@@ -7,3 +7,8 @@ gulp.task('build:asset:scss', function () {
         .pipe($.rubySass())
         .pipe(gulp.dest('./build/css'));
 });
+
+
+gulp.task('build:live', function(){
+    gulp.watch('./src/asset/scss/**/*.scss', ['build:asset:scss']);
+})
