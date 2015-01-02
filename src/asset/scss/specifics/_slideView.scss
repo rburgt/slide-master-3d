@@ -1,0 +1,7 @@
+.slideView {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
