@@ -11,10 +11,13 @@
     "gulp-swig": "^0.7.4",
     "gulp-uglify": "^1.0.2",
     "normalize.scss": "^0.1.0",
+    "partialify": "^3.1.2",
+    "rivets": "^0.7.1",
     "vinyl-source-stream": "^1.0.0"
   },
   "browserify": {
     "transform": [
+      "partialify",
       "6to5ify"
     ]
   }

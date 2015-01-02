@@ -9,7 +9,7 @@ gulp.task('build:asset:javascript', function () {
     browserify('./src/asset/javascript/slide-master-3d.js')
         .bundle()
         .pipe(source('slide-master-3d.js'))
-        .pipe($.streamify($.uglify()))
+        //.pipe($.streamify($.uglify()))
         .pipe(gulp.dest('./build/javascript'));
 });
 
