@@ -10,6 +10,18 @@ class SlideView extends RivetsView {
         super(configuration);
     }
 
+
+    /**
+    * @returns {HTMLElement}
+    * @protected
+    */
+    _generateElement(){
+        var element = super._generateElement();
+        element.classList.add('slideView');
+        element.setAttribute('rv-class-active', '_active');
+        return element;
+    }
+
     /**
      * Either activate or deactivate the view.
      *
