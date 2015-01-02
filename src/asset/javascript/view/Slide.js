@@ -58,6 +58,16 @@ class SlideView extends RivetsView {
     get animating(){
         return this._animating || false;
     }
+
+    /**
+     * A SlideView is occupied to be used if its
+     * active or animating.
+     *
+     * @returns {boolean}
+     */
+    get occupied(){
+        return this.animating || this.active;
+    }
 }
 
 module.exports = SlideView;
