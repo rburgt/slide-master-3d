@@ -6,7 +6,6 @@ class SlideView extends RivetsView {
      * @param configuration
      */
     constructor(configuration) {
-        this.animating = false;
         this.template = require('../template/Slide.html');
         super(configuration);
     }
