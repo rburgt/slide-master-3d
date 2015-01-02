@@ -1,0 +1,47 @@
+%neighbourNavigation_button {
+  position: absolute;
+  top: 48%;
+  top: calc( 50% - 2.5em );
+  height: 5em;
+  line-height: 4.5em;
+  padding: 0;
+  width: 5em;
+  z-index: 30;
+  background: transparent;
+  border: none;
+  transition: color 300ms, background 300ms;
+  text-align: center;
+  background: rgba(200,200,200,.05);
+  color: rgba(150,150,150,.2);
+
+  &:before {
+    font-size: 3em;
+  }
+
+  &:hover {
+    opacity: .8;
+    color: rgba(240,240,240,1);
+    background: rgba(200,200,200,1);
+  }
+}
+
+.neighbourNavigation {
+
+  &_previous {
+    @extend %neighbourNavigation_button;
+    left: 0;
+
+    &:before {
+      content: '<';
+    }
+  }
+
+  &_next {
+    @extend %neighbourNavigation_button;
+    right: 0;
+
+    &:before {
+      content: '>';
+    }
+  }
+}
