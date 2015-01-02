@@ -23,8 +23,8 @@ gulp.task('build:asset:scss', function () {
                 'node_modules'
             ]
         }))
+        .pipe($.ignore('**/*.css.map'))
         .pipe($.autoprefixer())
-        .on('error', function (err) { console.log(err.message); })
         .pipe(gulp.dest('./build/css'));
 });
 

@@ -5,6 +5,7 @@
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-htmltidy": "^0.1.0",
+    "gulp-ignore": "^1.2.1",
     "gulp-load-plugins": "^0.8.0",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-streamify": "0.0.5",
